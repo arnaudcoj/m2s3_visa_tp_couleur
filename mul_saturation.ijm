@@ -17,12 +17,23 @@ Dialog.show();
 
 setBatchMode(true);
 
-//macro
+//operation start
+titre=getTitle();
+//print (titre);
 run("Color Space Converter", "from=RGB to=HSB white=D65");
 run("Split Channels");
-//run("Multiply...", "value=" + valeur);
-//run("Merge Channels...", "c1=[cas_2_dalton16-question2-1.bmp (HSB) (red)] c2=[cas_2_dalton16-question2-1.bmp (HSB) (green)] c3=[cas_2_dalton16-question2-1.bmp (HSB) (blue)] create");
-//run("Color Space Converter", "from=HSB to=RGB white=D65");
+command = titre+" (HSB) (green)";
+selectWindow(command);
+//selectWindow("it3_72pp_saturation_faible.bmp (HSB) (green)");
+
+run("Multiply...", "value=" + valeur);
+
+command = "c1=["+titre+" (HSB) (red)] c2=["+titre+" (HSB) (green)] c3=["+titre+" (HSB) (blue)] ignore"
+//run("Merge Channels...", "c1=[it3_72pp_saturation_faible.bmp (HSB) (red)] c2=[it3_72pp_saturation_faible.bmp (HSB) (green)] c3=[it3_72pp_saturation_faible.bmp (HSB) (blue)] ignore");
+run("Merge Channels...", command);
+run("Color Space Converter", "from=HSB to=RGB white=D65");
+//operation end
+
 
 setBatchMode(false);
 
@@ -32,3 +43,4 @@ Dialog.show();
 
 
 }
+
