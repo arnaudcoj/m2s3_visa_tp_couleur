@@ -26,7 +26,7 @@ command = titre+" (HSB) (red)";
 selectWindow(command);
 //selectWindow("it3_72pp_saturation_faible.bmp (HSB) (green)");
 
-run("Add...", "value=" + valeur);
+run("Add...", "value=" + (valeur * 256) / 360);
 
 command = "c1=["+titre+" (HSB) (red)] c2=["+titre+" (HSB) (green)] c3=["+titre+" (HSB) (blue)] ignore"
 //run("Merge Channels...", "c1=[it3_72pp_saturation_faible.bmp (HSB) (red)] c2=[it3_72pp_saturation_faible.bmp (HSB) (green)] c3=[it3_72pp_saturation_faible.bmp (HSB) (blue)] ignore");
