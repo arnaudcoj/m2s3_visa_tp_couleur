@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-
+\usepackage{float}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -50,7 +50,7 @@
 
 \title{VISA -- TP Couleurs}
 \author{Arnaud Cojez}
-\date{mardi 7 novembre 2016}
+\date{mercredi 9 novembre 2016}
 
 \maketitle
 
@@ -69,10 +69,10 @@ Ainsi, chaque opération effectuée sur une image aura un effet lié à la repr�
 Le long de ce TP, nous utiliserons l'espace de couleurs HSB (Hue-Saturation-Brightness). Celui-ci nous permet de modifier la luminance, la teinte et la saturation de l'image.\\
 Les fichiers utilisés sont des images composant le test d'Ishihara, qui permet de détecter les déficiences dichromatiques telles que le daltonisme.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
-\includegraphics[width=170px]{planche_26.png}
-\includegraphics[width=170px]{planche_6.png}
+\includegraphics[width=170px]{../base/cas_1_dalton26.png}
+\includegraphics[width=170px]{../base/cas_4_dalton6.png}
 \end{center}
 \caption{Planches issues du Test d'Ishihara}
 \end{figure}
@@ -85,6 +85,164 @@ Les fichiers utilisés sont des images composant le test d'Ishihara, qui permet 
 
 \section{Manipulation de la luminance}
 
+\subsection{Explication}
+
+TODO expliquer principe
+
+\subsubsection{Cas 1}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_1_dalton26.png}
+\includegraphics[width=170px]{../base/cas_1_luminance.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image modifiée}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e1_q1_k1_26.png}
+\includegraphics[width=170px]{../resultats/e1_q1_k1_lumi.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+TODO expliquer différence estimée
+
+\clearpage
+\subsubsection{Cas 2}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_2_dalton7.png}
+\includegraphics[width=170px]{../base/cas_2_luminance.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image modifiée}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e1_q1_k2_7.png}
+\includegraphics[width=170px]{../resultats/e1_q1_k2_lumi.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+TODO expliquer différence estimée
+
+\clearpage
+\subsubsection{Cas 3}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_3_dalton3.png}
+\includegraphics[width=170px]{../base/cas_3_luminance.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image modifiée}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e1_q1_k3_3.png}
+\includegraphics[width=170px]{../resultats/e1_q1_k3_lumi.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+TODO expliquer différence estimée
+
+\clearpage
+\subsubsection{Cas 4}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_4_dalton6.png}
+\includegraphics[width=170px]{../base/cas_4_luminance.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image modifiée}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e1_q1_k4_6.png}
+\includegraphics[width=170px]{../resultats/e1_q1_k4_lumi.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+TODO expliquer différence estimée
+
+\clearpage
+\subsection{Résultats}
+
+\subsubsection{Cas 1}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_1_dalton26.png}
+\includegraphics[width=170px]{../resultats/e1_q2_k1_luminance.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image retouchée}
+\end{figure}
+
+TODO analyse des images
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e1_q2_k1_diff.png}
+\includegraphics[width=170px]{../resultats/e1_q2_k1_diff_hist.png}
+\end{center}
+\caption{Carte des différences et son histogramme}
+\end{figure}
+
+\clearpage
+\subsubsection{Cas 2}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_2_dalton7.png}
+\includegraphics[width=170px]{../resultats/e1_q2_k2_luminance.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image retouchée}
+\end{figure}
+
+TODO analyse des images
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e1_q2_k2_diff.png}
+\includegraphics[width=170px]{../resultats/e1_q2_k2_diff_hist.png}
+\end{center}
+\caption{Carte des différences et son histogramme}
+\end{figure}
+
+\clearpage
+\subsubsection{Cas 3}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_3_dalton3.png}
+\includegraphics[width=170px]{../resultats/e1_q2_k3_luminance.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image retouchée}
+\end{figure}
+
+TODO analyse des images
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e1_q2_k3_diff.png}
+\includegraphics[width=170px]{../resultats/e1_q2_k3_diff_hist.png}
+\end{center}
+\caption{Carte des différences et son histogramme}
+\end{figure}
+
+\clearpage
+\subsubsection{Cas 4}
+
+TODO Pas de modification à faire
+
+
 \clearpage
 %----------------------------------------------------------------------------------------
 % RÉTABLISSEMENT DE LA SATURATION
@@ -92,12 +250,147 @@ Les fichiers utilisés sont des images composant le test d'Ishihara, qui permet 
 
 \section{Rétablissement de la saturation}
 
+\subsection{Explication}
+
+TODO expliquer principe
+
+\subsubsection{Cas 2}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_2_dalton16.png}
+\includegraphics[width=170px]{../base/cas_2_dalton16-question2-1.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e2_q1_k2_16.png}
+\includegraphics[width=170px]{../resultats/e2_q1_k2_modif.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+TODO expliquer différence estimée
+
+\clearpage
+\subsubsection{Cas 1}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_1_dalton42.png}
+\includegraphics[width=170px]{../base/cas_1_dalton42-question2-2.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e2_q2_k1_42.png}
+\includegraphics[width=170px]{../resultats/e2_q2_k1_modif.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+TODO expliquer différence estimée
+
+\clearpage
+\subsection{Résultats}
+\subsubsection{Cas 2}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_2_dalton16.png}
+\includegraphics[width=170px]{../resultats/e2_q3_1_modif.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image retouchée}
+\end{figure}
+
+TODO analyse résultats
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e2_q3_1_diff.png}
+\includegraphics[width=170px]{../resultats/e2_q3_1_diff_hist.png}
+\end{center}
+\caption{Carte des différences et son histogramme}
+\end{figure}
+
+
+\clearpage
+\subsubsection{Cas 1}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_1_dalton42.png}
+\includegraphics[width=170px]{../resultats/e2_q3_2_modif.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image retouchée}
+\end{figure}
+
+TODO analyse résultats
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e2_q3_2_diff.png}
+\includegraphics[width=170px]{../resultats/e2_q3_2_diff_hist.png}
+\end{center}
+\caption{Carte des différences et son histogramme}
+\end{figure}
+
 \clearpage
 %----------------------------------------------------------------------------------------
 %	TRANSFORMATION DE LA TEINTE
 %----------------------------------------------------------------------------------------
 
 \section{Transformation de la teinte}
+
+\subsection{Explication}
+
+TODO expliquer principe
+
+\subsubsection{Cas 3}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_3_dalton74.png}
+\includegraphics[width=170px]{../base/cas_3_dalton74_question3_1.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image modifiée}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e2_q3_1_diff.png}
+\includegraphics[width=170px]{../resultats/e2_q3_1_diff_hist.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+TODO expliquer différence estimée
+
+\clearpage
+\subsection{Résultats}
+\subsubsection{Cas 3}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_3_dalton74.png}
+\includegraphics[width=170px]{../resultats/e3_q1_modif.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image retouchée}
+\end{figure}
+
+TODO analyse résultats
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e3_q1_diff.png}
+\includegraphics[width=170px]{../resultats/e3_q1_diff_hist.png}
+\end{center}
+\caption{Carte des différences et son histogramme}
+\end{figure}
 
 \clearpage
 
@@ -107,12 +400,66 @@ Les fichiers utilisés sont des images composant le test d'Ishihara, qui permet 
 
 \section{Analyse dans des espaces couleur adaptés}
 
+\subsection{Explication}
+
+TODO expliquer question
+
+\subsubsection{Cas 3}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_3_dalton74.png}
+\includegraphics[width=170px]{../base/cas3_dalton74_question4_1.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image modifiée}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e4_visu_original.png}
+\includegraphics[width=170px]{../resultats/e4_visu_modif.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+\clearpage
+\subsection{Analyse}
+
+TODO analyse
+
 \clearpage
 %----------------------------------------------------------------------------------------
 %	MODIFICATION DE LA LUMINANCE ADAPTÉE
 %----------------------------------------------------------------------------------------
 
 \section{Modification de la luminance adaptée}
+
+\subsection{Explication}
+
+TODO expliquer question
+
+\subsubsection{Cas 1}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../base/cas_1_dalton42.png}
+\includegraphics[width=170px]{../base/cas_1_dalton42-question5.png}
+\end{center}
+\caption{À gauche, image originale. À droite, image modifiée}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=170px]{../resultats/e5_visu_original.png}
+\includegraphics[width=170px]{../resultats/e5_visu_modif.png}
+\end{center}
+\caption{Visualisation des 2 images dans l'espace HSB}
+\end{figure}
+
+\clearpage
+\subsection{Analyse}
+
+TODO analyse
 
 \clearpage
 %----------------------------------------------------------------------------------------
@@ -133,5 +480,17 @@ Il peut donc être utile de convertir un espace colorimétrique en un autre afin
 %----------------------------------------------------------------------------------------
 
 \section{Annexe}
+
+\subsection{Manipulation de la luminance}
+\lstinputlisting{../add_brightness.ijm}
+TODO reproprer code
+
+\subsection{Rétablissement de la saturation}
+\lstinputlisting{../mul_saturation.ijm}
+TODO reproprer code
+
+\subsection{Transformation de la teinte}
+\lstinputlisting{../change_hue.ijm}
+TODO reproprer code
 
 \end{document}

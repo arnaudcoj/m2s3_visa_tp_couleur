@@ -8,7 +8,7 @@ macro "Changement de Teinte" {
 // recuperation du ID de l'image
 image = getImageID();
 
-valeur = getNumber ("quel degré de rotation de teinte",valeur);
+valeur = getNumber ("quel degre de rotation de teinte",valeur);
 
 Dialog.create("Debut");
 Dialog.addMessage(" Cliquer sur OK pour commencer le traitement ");
@@ -43,4 +43,3 @@ Dialog.show();
 
 
 }
-
